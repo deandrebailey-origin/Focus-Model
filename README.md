@@ -1,6 +1,10 @@
 # Temporary Read Me
 # 🧠 Deep Work: AI-Powered Focus Tracker
 
+# Focus Model: AI-Powered Focus Tracker
+
+[![CI](https://github.com/deandrebailey-origin/Focus-Model/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/deandrebailey-origin/Focus-Model/actions/workflows/ci.yml)
+
 A full-stack "Smart Pomodoro" application that uses a custom **Convolutional Neural Network (CNN)** to monitor user engagement in real-time. If the AI detects the user is distracted or looking away from the screen, it automatically pauses the focus timer and provides immediate visual feedback.
 
 ## ✨ Features
