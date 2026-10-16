@@ -1,5 +1,6 @@
 FROM python:3.14-slim
 
+
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1
 
 # dont ccreate pycahche files which are useless
