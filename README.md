@@ -1,5 +1,7 @@
 # Focus Model: AI-Powered Focus Tracker
 
+[![CI](https://github.com/deandrebailey-origin/Focus-Model/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/deandrebailey-origin/Focus-Model/actions/workflows/ci.yml)
+
 A full-stack "smart Pomodoro" app. A custom PyTorch CNN watches your webcam and pauses the focus timer when you look away.
 
 ## Quick start (Docker)
