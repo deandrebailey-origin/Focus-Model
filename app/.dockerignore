@@ -1,0 +1,5 @@
+node_modules/
+dist/
+
+# image installs its own node_module with npm ci
+# and dist is built sending mac copies waste time
