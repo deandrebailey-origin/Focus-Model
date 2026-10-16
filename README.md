@@ -1,6 +1,3 @@
-# Temporary Read Me
-# 🧠 Deep Work: AI-Powered Focus Tracker
-
 # Focus Model: AI-Powered Focus Tracker
 
 [![CI](https://github.com/deandrebailey-origin/Focus-Model/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/deandrebailey-origin/Focus-Model/actions/workflows/ci.yml)
