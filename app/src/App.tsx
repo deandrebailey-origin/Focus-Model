@@ -3,6 +3,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import Webcam from 'react-webcam';
 import axios from 'axios';
 
+const API_URL = import.meta.env.VITE_API_URL ?? "/api";
+
 const App: React.FC = () => {
   // Fix 1: Explicitly type the Ref to allow Webcam methods
   const webcamRef = useRef<Webcam>(null);
@@ -21,7 +23,7 @@ const App: React.FC = () => {
       if (imageSrc) {
         try {
           // You can also type the API response if you want to be extra strict
-          const response = await axios.post<{ status: string }>('http://127.0.0.1:8000/predict-focus', {
+          const response = await axios.post<{ status: string }>(`${API_URL}/predict-focus`, {
             image_b64: imageSrc
           });
 
@@ -32,7 +34,7 @@ const App: React.FC = () => {
           if (result === "Distracted") {
             setIsActive(false);
           }
-        } catch (err) {
+        } catch {
           console.error("API Offline. Make sure Uvicorn is running!");
           setStatus("Offline");
         }
