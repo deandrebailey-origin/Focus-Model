@@ -33,9 +33,11 @@ def load_model(path: str | Path, device: str = "cpu") -> "FocusStateCNN":
     return model
 
 def predict(model: "FocusStateCNN", image: Image.Image, device: str = "cpu") -> str:
-    x = TRANSFORM(image.convert("RGB")).unsqueeze(0).to(device) # convert to RGB and add batch dimension
+    x = TRANSFORM(image.convert("RGB")).unsqueeze(0).to(device) # convert to RGB and add 
+    # batch dimension
     with torch.no_grad(): # disable gradient calculation for inference
-        idx = model(x).argmax(dim=1).item() # get the index of the class with the highest probability
+        idx = model(x).argmax(dim=1).item() # get the index of the 
+        # class with the highest probability
     return CLASSES[idx] # return the class name
 
 

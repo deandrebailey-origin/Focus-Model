@@ -24,16 +24,19 @@ app.add_middleware(
 )
 model = load_model(MODEL_PATH)
 
-class ImafeData(BaseModel):
+class ImageData(BaseModel):
     image_b64: str
 
-## checks if incoming json has no image_b64 key or if the value is empty, and raises an HTTPException with a 400 status code and a message indicating that the image data is missing.\
+## checks if incoming json has no image_b64 key 
+# or if the value is empty, and raises an HTTPException with 
+# a 400 status code and a message indicating 
+# that the image data is missing.
 
 @app.get("/health")
 def health():
     return {"status": "ok"}
 
-@app.post
+@app.post("/predict-focus")
 def predict_focus(data: ImageData):
     if len(data.image_b64) > MAX_B64_CHARS:
         raise HTTPException(status_code=413, detail="Image too large")

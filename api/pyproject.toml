@@ -1,0 +1,10 @@
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[tool.ruff] # A linter reads your code withoutrunning it and points mistakes
+line-length = 100
+extend-exclude = ["*.ipynb", "live.py"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B"]
