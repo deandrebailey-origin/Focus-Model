@@ -7,3 +7,7 @@ docker login
 
 docker tag
 docker push
+
+<account-id> and <region>
+
+us-east-2
