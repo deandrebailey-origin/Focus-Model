@@ -16,7 +16,7 @@ FROM nginx:1.27-alpine
 # Stage 2 starts fresh from nginx a fast web server
 # Everythig from stage 1 is gone, we only copy the build output
 
-COPY nginx.conf /etc.nginx.conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 #replace nfinx default site config with mine
 
